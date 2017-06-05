@@ -1,0 +1,379 @@
+
+<div class="period-grid__scrollable">
+  <div class="period-grid__overview">
+    <!-- left column with timestamps-->
+    <div class="period-grid__time-column">
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 0)" (mousemove)="handleLineMouseMove($event, 0, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 15)" (mousemove)="handleLineMouseMove($event, 0, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 30)" (mousemove)="handleLineMouseMove($event, 0, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 45)" (mousemove)="handleLineMouseMove($event, 0, 45)"></div>
+        <div class="period-grid__time">00:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 0 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 0)" (mousemove)="handleLineMouseMove($event, 1, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 15)" (mousemove)="handleLineMouseMove($event, 1, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 30)" (mousemove)="handleLineMouseMove($event, 1, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 45)" (mousemove)="handleLineMouseMove($event, 1, 45)"></div>
+        <div class="period-grid__time">01:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 1 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 0)" (mousemove)="handleLineMouseMove($event, 2, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 15)" (mousemove)="handleLineMouseMove($event, 2, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 30)" (mousemove)="handleLineMouseMove($event, 2, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 45)" (mousemove)="handleLineMouseMove($event, 2, 45)"></div>
+        <div class="period-grid__time">02:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 2 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 0)" (mousemove)="handleLineMouseMove($event, 3, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 15)" (mousemove)="handleLineMouseMove($event, 3, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 30)" (mousemove)="handleLineMouseMove($event, 3, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 45)" (mousemove)="handleLineMouseMove($event, 3, 45)"></div>
+        <div class="period-grid__time">03:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 3 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 0)" (mousemove)="handleLineMouseMove($event, 4, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 15)" (mousemove)="handleLineMouseMove($event, 4, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 30)" (mousemove)="handleLineMouseMove($event, 4, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 45)" (mousemove)="handleLineMouseMove($event, 4, 45)"></div>
+        <div class="period-grid__time">04:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 4 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 0)" (mousemove)="handleLineMouseMove($event, 5, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 15)" (mousemove)="handleLineMouseMove($event, 5, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 30)" (mousemove)="handleLineMouseMove($event, 5, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 45)" (mousemove)="handleLineMouseMove($event, 5, 45)"></div>
+        <div class="period-grid__time">05:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 5 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 0)" (mousemove)="handleLineMouseMove($event, 6, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 15)" (mousemove)="handleLineMouseMove($event, 6, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 30)" (mousemove)="handleLineMouseMove($event, 6, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 45)" (mousemove)="handleLineMouseMove($event, 6, 45)"></div>
+        <div class="period-grid__time">06:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 6 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 0)" (mousemove)="handleLineMouseMove($event, 7, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 15)" (mousemove)="handleLineMouseMove($event, 7, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 30)" (mousemove)="handleLineMouseMove($event, 7, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 45)" (mousemove)="handleLineMouseMove($event, 7, 45)"></div>
+        <div class="period-grid__time">07:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 7 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 0)" (mousemove)="handleLineMouseMove($event, 8, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 15)" (mousemove)="handleLineMouseMove($event, 8, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 30)" (mousemove)="handleLineMouseMove($event, 8, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 45)" (mousemove)="handleLineMouseMove($event, 8, 45)"></div>
+        <div class="period-grid__time">08:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 8 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 0)" (mousemove)="handleLineMouseMove($event, 9, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 15)" (mousemove)="handleLineMouseMove($event, 9, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 30)" (mousemove)="handleLineMouseMove($event, 9, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 45)" (mousemove)="handleLineMouseMove($event, 9, 45)"></div>
+        <div class="period-grid__time">09:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 9 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 0)" (mousemove)="handleLineMouseMove($event, 10, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 15)" (mousemove)="handleLineMouseMove($event, 10, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 30)" (mousemove)="handleLineMouseMove($event, 10, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 45)" (mousemove)="handleLineMouseMove($event, 10, 45)"></div>
+        <div class="period-grid__time">10:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 10 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 0)" (mousemove)="handleLineMouseMove($event, 11, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 15)" (mousemove)="handleLineMouseMove($event, 11, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 30)" (mousemove)="handleLineMouseMove($event, 11, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 45)" (mousemove)="handleLineMouseMove($event, 11, 45)"></div>
+        <div class="period-grid__time">11:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 11 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 0)" (mousemove)="handleLineMouseMove($event, 12, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 15)" (mousemove)="handleLineMouseMove($event, 12, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 30)" (mousemove)="handleLineMouseMove($event, 12, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 45)" (mousemove)="handleLineMouseMove($event, 12, 45)"></div>
+        <div class="period-grid__time">12:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 12 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 0)" (mousemove)="handleLineMouseMove($event, 13, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 15)" (mousemove)="handleLineMouseMove($event, 13, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 30)" (mousemove)="handleLineMouseMove($event, 13, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 45)" (mousemove)="handleLineMouseMove($event, 13, 45)"></div>
+        <div class="period-grid__time">13:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 13 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 0)" (mousemove)="handleLineMouseMove($event, 14, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 15)" (mousemove)="handleLineMouseMove($event, 14, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 30)" (mousemove)="handleLineMouseMove($event, 14, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 45)" (mousemove)="handleLineMouseMove($event, 14, 45)"></div>
+        <div class="period-grid__time">14:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 14 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 0)" (mousemove)="handleLineMouseMove($event, 15, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 15)" (mousemove)="handleLineMouseMove($event, 15, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 30)" (mousemove)="handleLineMouseMove($event, 15, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 45)" (mousemove)="handleLineMouseMove($event, 15, 45)"></div>
+        <div class="period-grid__time">15:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 15 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 0)" (mousemove)="handleLineMouseMove($event, 16, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 15)" (mousemove)="handleLineMouseMove($event, 16, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 30)" (mousemove)="handleLineMouseMove($event, 16, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 45)" (mousemove)="handleLineMouseMove($event, 16, 45)"></div>
+        <div class="period-grid__time">16:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 16 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 0)" (mousemove)="handleLineMouseMove($event, 17, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 15)" (mousemove)="handleLineMouseMove($event, 17, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 30)" (mousemove)="handleLineMouseMove($event, 17, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 45)" (mousemove)="handleLineMouseMove($event, 17, 45)"></div>
+        <div class="period-grid__time">17:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 17 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 0)" (mousemove)="handleLineMouseMove($event, 18, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 15)" (mousemove)="handleLineMouseMove($event, 18, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 30)" (mousemove)="handleLineMouseMove($event, 18, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 45)" (mousemove)="handleLineMouseMove($event, 18, 45)"></div>
+        <div class="period-grid__time">18:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 18 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 0)" (mousemove)="handleLineMouseMove($event, 19, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 15)" (mousemove)="handleLineMouseMove($event, 19, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 30)" (mousemove)="handleLineMouseMove($event, 19, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 45)" (mousemove)="handleLineMouseMove($event, 19, 45)"></div>
+        <div class="period-grid__time">19:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 19 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 0)" (mousemove)="handleLineMouseMove($event, 20, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 15)" (mousemove)="handleLineMouseMove($event, 20, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 30)" (mousemove)="handleLineMouseMove($event, 20, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 45)" (mousemove)="handleLineMouseMove($event, 20, 45)"></div>
+        <div class="period-grid__time">20:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 20 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 0)" (mousemove)="handleLineMouseMove($event, 21, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 15)" (mousemove)="handleLineMouseMove($event, 21, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 30)" (mousemove)="handleLineMouseMove($event, 21, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 45)" (mousemove)="handleLineMouseMove($event, 21, 45)"></div>
+        <div class="period-grid__time">21:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 21 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 0)" (mousemove)="handleLineMouseMove($event, 22, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 15)" (mousemove)="handleLineMouseMove($event, 22, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 30)" (mousemove)="handleLineMouseMove($event, 22, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 45)" (mousemove)="handleLineMouseMove($event, 22, 45)"></div>
+        <div class="period-grid__time">22:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 22 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 0)" (mousemove)="handleLineMouseMove($event, 23, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 15)" (mousemove)="handleLineMouseMove($event, 23, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 30)" (mousemove)="handleLineMouseMove($event, 23, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 45)" (mousemove)="handleLineMouseMove($event, 23, 45)"></div>
+        <div class="period-grid__time">23:00</div>
+        <div class="period-grid__time period-grid__time--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 23 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"><span>{{ calendarService.now.format('HH:mm') }}</span></div>
+      </div>
+      <div class="period-grid__time-cell period-grid__time-cell--empty-space">
+        <div class="period-grid__time">00:00</div>
+      </div>
+    </div>
+    <!-- right column with grid lines & events-->
+    <div class="period-grid__display-column">
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 0)" (mousemove)="handleLineMouseMove($event, 0, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 15)" (mousemove)="handleLineMouseMove($event, 0, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 30)" (mousemove)="handleLineMouseMove($event, 0, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 45)" (mousemove)="handleLineMouseMove($event, 0, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 0 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 0)" (mousemove)="handleLineMouseMove($event, 1, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 15)" (mousemove)="handleLineMouseMove($event, 1, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 30)" (mousemove)="handleLineMouseMove($event, 1, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 45)" (mousemove)="handleLineMouseMove($event, 1, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 1 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 0)" (mousemove)="handleLineMouseMove($event, 2, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 15)" (mousemove)="handleLineMouseMove($event, 2, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 30)" (mousemove)="handleLineMouseMove($event, 2, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 45)" (mousemove)="handleLineMouseMove($event, 2, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 2 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 0)" (mousemove)="handleLineMouseMove($event, 3, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 15)" (mousemove)="handleLineMouseMove($event, 3, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 30)" (mousemove)="handleLineMouseMove($event, 3, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 45)" (mousemove)="handleLineMouseMove($event, 3, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 3 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 0)" (mousemove)="handleLineMouseMove($event, 4, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 15)" (mousemove)="handleLineMouseMove($event, 4, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 30)" (mousemove)="handleLineMouseMove($event, 4, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 45)" (mousemove)="handleLineMouseMove($event, 4, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 4 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 0)" (mousemove)="handleLineMouseMove($event, 5, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 15)" (mousemove)="handleLineMouseMove($event, 5, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 30)" (mousemove)="handleLineMouseMove($event, 5, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 45)" (mousemove)="handleLineMouseMove($event, 5, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 5 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 0)" (mousemove)="handleLineMouseMove($event, 6, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 15)" (mousemove)="handleLineMouseMove($event, 6, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 30)" (mousemove)="handleLineMouseMove($event, 6, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 45)" (mousemove)="handleLineMouseMove($event, 6, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 6 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 0)" (mousemove)="handleLineMouseMove($event, 7, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 15)" (mousemove)="handleLineMouseMove($event, 7, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 30)" (mousemove)="handleLineMouseMove($event, 7, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 45)" (mousemove)="handleLineMouseMove($event, 7, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 7 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 0)" (mousemove)="handleLineMouseMove($event, 8, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 15)" (mousemove)="handleLineMouseMove($event, 8, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 30)" (mousemove)="handleLineMouseMove($event, 8, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 45)" (mousemove)="handleLineMouseMove($event, 8, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 8 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 0)" (mousemove)="handleLineMouseMove($event, 9, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 15)" (mousemove)="handleLineMouseMove($event, 9, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 30)" (mousemove)="handleLineMouseMove($event, 9, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 45)" (mousemove)="handleLineMouseMove($event, 9, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 9 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 0)" (mousemove)="handleLineMouseMove($event, 10, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 15)" (mousemove)="handleLineMouseMove($event, 10, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 30)" (mousemove)="handleLineMouseMove($event, 10, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 45)" (mousemove)="handleLineMouseMove($event, 10, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 10 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 0)" (mousemove)="handleLineMouseMove($event, 11, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 15)" (mousemove)="handleLineMouseMove($event, 11, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 30)" (mousemove)="handleLineMouseMove($event, 11, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 45)" (mousemove)="handleLineMouseMove($event, 11, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 11 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 0)" (mousemove)="handleLineMouseMove($event, 12, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 15)" (mousemove)="handleLineMouseMove($event, 12, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 30)" (mousemove)="handleLineMouseMove($event, 12, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 45)" (mousemove)="handleLineMouseMove($event, 12, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 12 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 0)" (mousemove)="handleLineMouseMove($event, 13, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 15)" (mousemove)="handleLineMouseMove($event, 13, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 30)" (mousemove)="handleLineMouseMove($event, 13, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 45)" (mousemove)="handleLineMouseMove($event, 13, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 13 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 0)" (mousemove)="handleLineMouseMove($event, 14, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 15)" (mousemove)="handleLineMouseMove($event, 14, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 30)" (mousemove)="handleLineMouseMove($event, 14, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 45)" (mousemove)="handleLineMouseMove($event, 14, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 14 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 0)" (mousemove)="handleLineMouseMove($event, 15, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 15)" (mousemove)="handleLineMouseMove($event, 15, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 30)" (mousemove)="handleLineMouseMove($event, 15, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 45)" (mousemove)="handleLineMouseMove($event, 15, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 15 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 0)" (mousemove)="handleLineMouseMove($event, 16, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 15)" (mousemove)="handleLineMouseMove($event, 16, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 30)" (mousemove)="handleLineMouseMove($event, 16, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 45)" (mousemove)="handleLineMouseMove($event, 16, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 16 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 0)" (mousemove)="handleLineMouseMove($event, 17, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 15)" (mousemove)="handleLineMouseMove($event, 17, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 30)" (mousemove)="handleLineMouseMove($event, 17, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 45)" (mousemove)="handleLineMouseMove($event, 17, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 17 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 0)" (mousemove)="handleLineMouseMove($event, 18, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 15)" (mousemove)="handleLineMouseMove($event, 18, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 30)" (mousemove)="handleLineMouseMove($event, 18, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 45)" (mousemove)="handleLineMouseMove($event, 18, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 18 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 0)" (mousemove)="handleLineMouseMove($event, 19, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 15)" (mousemove)="handleLineMouseMove($event, 19, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 30)" (mousemove)="handleLineMouseMove($event, 19, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 45)" (mousemove)="handleLineMouseMove($event, 19, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 19 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 0)" (mousemove)="handleLineMouseMove($event, 20, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 15)" (mousemove)="handleLineMouseMove($event, 20, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 30)" (mousemove)="handleLineMouseMove($event, 20, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 45)" (mousemove)="handleLineMouseMove($event, 20, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 20 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 0)" (mousemove)="handleLineMouseMove($event, 21, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 15)" (mousemove)="handleLineMouseMove($event, 21, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 30)" (mousemove)="handleLineMouseMove($event, 21, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 45)" (mousemove)="handleLineMouseMove($event, 21, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 21 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 0)" (mousemove)="handleLineMouseMove($event, 22, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 15)" (mousemove)="handleLineMouseMove($event, 22, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 30)" (mousemove)="handleLineMouseMove($event, 22, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 45)" (mousemove)="handleLineMouseMove($event, 22, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 22 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 0)" (mousemove)="handleLineMouseMove($event, 23, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 15)" (mousemove)="handleLineMouseMove($event, 23, 15)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 30)" (mousemove)="handleLineMouseMove($event, 23, 30)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 45)" (mousemove)="handleLineMouseMove($event, 23, 45)"></div>
+        <div class="period-grid__time-minute period-grid__time-minute--now" *ngIf="calendarService.now.isSame(rangeStart.add({ hours: 23 }), &quot;hour&quot;)" [style.top.%]="100 * calendarService.now.minutes() / 60"></div>
+      </div>
+      <div class="period-grid__line period-grid__line--empty-space"></div>
+      <event class="period-grid__event" *ngFor="let display of stream" [event]="display.event" [style.left.%]="100 * (display.s - 1) / display.p" [style.width.%]="100 * display.f / display.p" [style.top.%]="100 * display.t" [style.bottom.%]="100 * display.b" [class.period-grid__event--transparent]="action" [class.period-grid__event--editable]="display.event === activeEvent" (mousedown)="handleEventMouseDown(display.event)"></event>
+    </div>
+  </div>
+</div>
+<div class="period-grid__sidebar">
+  <sidebar [event]="activeEvent" (remove)="removeEvent()"></sidebar>
+</div>

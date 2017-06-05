@@ -1,0 +1,130 @@
+.period-grid__sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.period-grid__scrollable {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  overflow: auto;
+  max-height: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.period-grid__overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  min-height: 60em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/* overview columns */
+.period-grid__time-column {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.period-grid__display-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/* --- */
+/* time cell */
+.period-grid__time-cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.period-grid__time-cell--empty-space {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+/* --- */
+.period-grid__time {
+  position: absolute;
+  top: -0.6em;
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.8em;
+  text-align: center;
+}
+.period-grid__time-minute {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+.period-grid__line .period-grid__time-minute:first-of-type {
+  border-top-color: rgba(0,0,0,0.4);
+}
+.period-grid__time-cell .period-grid__time-minute:first-of-type {
+  border-top-color: transparent;
+}
+/* grid line */
+.period-grid__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+.period-grid__line--empty-space {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+/* --- */
+/* event */
+.period-grid__event {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(100,100,100,0.5);
+  cursor: pointer;
+}
+.period-grid__event--transparent {
+  pointer-events: none;
+}
+.period-grid__event--editable {
+  background: rgba(100,100,100,0.8);
+}
+/* --- */

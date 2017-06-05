@@ -1,0 +1,49 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.period-grid__scrollable {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.period-grid__weekday-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+}
+.period-grid__weekday {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.period-grid__week {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.period-grid__day {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.period-grid__day-title {
+  cursor: pointer;
+  text-align: right;
+}
+.period-grid__event {
+  position: static;
+  font-size: 0.5em;
+}

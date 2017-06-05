@@ -1,0 +1,22 @@
+:host {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.period-grid__time--now {
+  position: absolute;
+  z-index: 1;
+  color: #f00;
+}
+.period-grid__time--now span {
+  background: #fff;
+}
+.period-grid__time-minute--now {
+  position: absolute;
+  z-index: 1;
+  border: none;
+  background: #f00;
+  width: 100%;
+  height: 1px;
+  margin-top: 0.4em;
+}

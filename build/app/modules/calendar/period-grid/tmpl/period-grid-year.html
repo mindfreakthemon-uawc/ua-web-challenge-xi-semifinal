@@ -1,0 +1,12 @@
+
+<div class="period-grid__scrollable">
+  <div class="period-grid__month" *ngFor="let month of moment.months(); let monthIndex = index">
+    <div class="period-grid__month-title" (click)="showMonth(monthIndex)">{{ month }}</div>
+    <div class="period-grid__weekdays">
+      <div class="period-grid__weekday" *ngFor="let weekday of createArray(7)">{{ moment.weekdaysMin((weekday + 1) % 7) }}</div>
+    </div>
+    <div class="period-grid__days">
+      <div class="period-grid__day" *ngFor="let day of getDaysRange(rangeStart.clone().add({ month: monthIndex }))" [class.period-grid__day--adjacent]="day &lt; 0 || day &gt;= rangeStart.clone().add({ month: monthIndex }).daysInMonth()" [class.period-grid__day--weekend]="[0, 6].includes(rangeStart.clone().add({ month: monthIndex }).add({ day: day }).day())" (click)="showDate(day, monthIndex)">{{ moment(rangeStart.clone().add({ month: monthIndex }).add({ day: day })).date() }}</div>
+    </div>
+  </div>
+</div>

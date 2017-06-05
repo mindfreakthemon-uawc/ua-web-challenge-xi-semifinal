@@ -1,0 +1,111 @@
+
+<div class="period-grid__scrollable">
+  <div class="period-grid__overview" *ngFor="let day of createArray(7)">
+    <!-- top row with weekday name-->
+    <div class="period-grid__weekday" (click)="showDate(day)">{{ moment.weekdaysShort((day + 1) % 7) }}, {{ rangeStart.add({ day: day }).date() }}</div>
+    <!-- bottom row with grid lines & events-->
+    <div class="period-grid__display-column">
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 0)" (mousemove)="handleLineMouseMove($event, 0, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(0, 30)" (mousemove)="handleLineMouseMove($event, 0, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 0)" (mousemove)="handleLineMouseMove($event, 1, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(1, 30)" (mousemove)="handleLineMouseMove($event, 1, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 0)" (mousemove)="handleLineMouseMove($event, 2, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(2, 30)" (mousemove)="handleLineMouseMove($event, 2, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 0)" (mousemove)="handleLineMouseMove($event, 3, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(3, 30)" (mousemove)="handleLineMouseMove($event, 3, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 0)" (mousemove)="handleLineMouseMove($event, 4, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(4, 30)" (mousemove)="handleLineMouseMove($event, 4, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 0)" (mousemove)="handleLineMouseMove($event, 5, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(5, 30)" (mousemove)="handleLineMouseMove($event, 5, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 0)" (mousemove)="handleLineMouseMove($event, 6, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(6, 30)" (mousemove)="handleLineMouseMove($event, 6, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 0)" (mousemove)="handleLineMouseMove($event, 7, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(7, 30)" (mousemove)="handleLineMouseMove($event, 7, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 0)" (mousemove)="handleLineMouseMove($event, 8, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(8, 30)" (mousemove)="handleLineMouseMove($event, 8, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 0)" (mousemove)="handleLineMouseMove($event, 9, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(9, 30)" (mousemove)="handleLineMouseMove($event, 9, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 0)" (mousemove)="handleLineMouseMove($event, 10, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(10, 30)" (mousemove)="handleLineMouseMove($event, 10, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 0)" (mousemove)="handleLineMouseMove($event, 11, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(11, 30)" (mousemove)="handleLineMouseMove($event, 11, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 0)" (mousemove)="handleLineMouseMove($event, 12, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(12, 30)" (mousemove)="handleLineMouseMove($event, 12, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 0)" (mousemove)="handleLineMouseMove($event, 13, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(13, 30)" (mousemove)="handleLineMouseMove($event, 13, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 0)" (mousemove)="handleLineMouseMove($event, 14, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(14, 30)" (mousemove)="handleLineMouseMove($event, 14, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 0)" (mousemove)="handleLineMouseMove($event, 15, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(15, 30)" (mousemove)="handleLineMouseMove($event, 15, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 0)" (mousemove)="handleLineMouseMove($event, 16, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(16, 30)" (mousemove)="handleLineMouseMove($event, 16, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 0)" (mousemove)="handleLineMouseMove($event, 17, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(17, 30)" (mousemove)="handleLineMouseMove($event, 17, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 0)" (mousemove)="handleLineMouseMove($event, 18, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(18, 30)" (mousemove)="handleLineMouseMove($event, 18, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 0)" (mousemove)="handleLineMouseMove($event, 19, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(19, 30)" (mousemove)="handleLineMouseMove($event, 19, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 0)" (mousemove)="handleLineMouseMove($event, 20, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(20, 30)" (mousemove)="handleLineMouseMove($event, 20, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 0)" (mousemove)="handleLineMouseMove($event, 21, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(21, 30)" (mousemove)="handleLineMouseMove($event, 21, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 0)" (mousemove)="handleLineMouseMove($event, 22, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(22, 30)" (mousemove)="handleLineMouseMove($event, 22, 30)"></div>
+      </div>
+      <div class="period-grid__line">
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 0)" (mousemove)="handleLineMouseMove($event, 23, 0)"></div>
+        <div class="period-grid__time-minute" (mousedown)="handleLineMouseDown(23, 30)" (mousemove)="handleLineMouseMove($event, 23, 30)"></div>
+      </div>
+      <div class="period-grid__line period-grid__line--empty-space"></div>
+      <event class="period-grid__event" *ngFor="let display of stream[day]" [event]="display.event" [style.left.%]="100 * (display.s - 1) / display.p" [style.width.%]="100 * display.f / display.p" [style.top.%]="100 * display.t" [style.bottom.%]="100 * display.b" [class.period-grid__event--transparent]="action" [class.period-grid__event--editable]="display.event === activeEvent" (mousedown)="handleEventMouseDown(display.event)"></event>
+    </div>
+  </div>
+</div>
+<div class="period-grid__sidebar">
+  <sidebar [event]="activeEvent" (remove)="removeEvent()"></sidebar>
+</div>

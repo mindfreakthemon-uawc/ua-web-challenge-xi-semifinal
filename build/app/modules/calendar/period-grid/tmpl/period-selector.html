@@ -1,0 +1,7 @@
+
+<div class="btn-group">
+  <button class="btn btn-secondary" type="button" [class.active]="calendarService.isPeriodTypeDay" (click)="calendarService.setPeriodTypeDay()">Day</button>
+  <button class="btn btn-secondary" type="button" [class.active]="calendarService.isPeriodTypeWeek" (click)="calendarService.setPeriodTypeWeek()">Week</button>
+  <button class="btn btn-secondary" type="button" [class.active]="calendarService.isPeriodTypeMonth" (click)="calendarService.setPeriodTypeMonth()">Month</button>
+  <button class="btn btn-secondary" type="button" [class.active]="calendarService.isPeriodTypeYear" (click)="calendarService.setPeriodTypeYear()">Year</button>
+</div>

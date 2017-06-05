@@ -1,0 +1,28 @@
+
+<div class="calendar__controls">
+  <div class="calendar__control-piece">
+    <period-selector></period-selector>
+  </div>
+  <div class="calendar__control-piece calendar__control-display">
+    <period-display></period-display>
+  </div>
+  <div class="calendar__control-piece calendar__control-navigation">
+    <navigation></navigation>
+  </div>
+</div>
+<div class="calendar__display">
+  <ng-container [ngSwitch]="true">
+    <ng-container *ngSwitchCase="calendarService.isPeriodTypeDay">
+      <period-grid-day class="calendar__grid"></period-grid-day>
+    </ng-container>
+    <ng-container *ngSwitchCase="calendarService.isPeriodTypeWeek">
+      <period-grid-week class="calendar__grid"></period-grid-week>
+    </ng-container>
+    <ng-container *ngSwitchCase="calendarService.isPeriodTypeMonth">
+      <period-grid-month class="calendar__grid"></period-grid-month>
+    </ng-container>
+    <ng-container *ngSwitchCase="calendarService.isPeriodTypeYear">
+      <period-grid-year class="calendar__grid"></period-grid-year>
+    </ng-container>
+  </ng-container>
+</div>
