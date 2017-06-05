@@ -16,7 +16,7 @@ AppRoutingModule = tslib_1.__decorate([
             router_1.RouterModule
         ],
         providers: [
-            { provide: common_1.APP_BASE_HREF, useValue: '/' }
+            { provide: common_1.APP_BASE_HREF, useValue: '/ua-web-challenge-xi-semifinal' }
         ]
     })
 ], AppRoutingModule);
