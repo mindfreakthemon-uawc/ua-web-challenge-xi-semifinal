@@ -1,0 +1,40 @@
+.sidebar__form('*ngIf'='event; else noEvent')
+	form.form
+		.form-group
+			label Title
+			input.form-control(
+				name='title',
+				type='text',
+				'[(ngModel)]'='event.title'
+			)
+
+		.form-group
+			label Start Date
+			input.form-control(
+				name='startDate',
+				type='datetime-local',
+				'[ngModel]'='event.startDate.format("YYYY-MM-DDTHH:mm")',
+				'(ngModelChange)'='setStartDate($event)'
+			)
+
+		.form-group
+			label End Date
+			input.form-control(
+				name='endDate',
+				type='datetime-local',
+				'[ngModel]'='event.endDate.format("YYYY-MM-DDTHH:mm")',
+				'(ngModelChange)'='setEndDate($event)'
+			)
+
+		.form-group
+			button.btn.btn-block.btn-danger(
+				type='button',
+				'(click)'='remove.next()'
+			) Remove Event
+
+			button.btn.btn-block.btn-primary(
+				type='button',
+				'(click)'='downloadICS()'
+			) Download ICS
+ng-template('#noEvent'='')
+	.sidebar__no-event No Event Selected

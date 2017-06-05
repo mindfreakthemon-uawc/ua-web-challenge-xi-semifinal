@@ -1,0 +1,46 @@
+:host {
+	display: flex;
+}
+
+.period-grid__scrollable {
+	flex-direction: column;
+}
+
+.period-grid__weekday-row {
+	display: flex;
+	min-height: min-content;
+}
+
+.period-grid__weekday {
+	flex: 1;
+
+	padding: 0 1em;
+
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.period-grid__week {
+	flex: 1;
+
+	display: flex;
+}
+
+.period-grid__day {
+	flex: 1;
+
+	padding: 0.5em;
+
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.period-grid__day-title {
+	cursor: pointer;
+
+	text-align: right;
+}
+
+.period-grid__event {
+	position: static;
+
+	font-size: 0.5em;
+}

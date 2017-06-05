@@ -1,0 +1,19 @@
+.calendar__controls
+	.calendar__control-piece
+		period-selector
+	.calendar__control-piece.calendar__control-display
+		period-display
+	.calendar__control-piece.calendar__control-navigation
+		navigation
+
+.calendar__display
+	ng-container('[ngSwitch]'='true')
+		ng-container('*ngSwitchCase'='calendarService.isPeriodTypeDay')
+			period-grid-day.calendar__grid
+		ng-container('*ngSwitchCase'='calendarService.isPeriodTypeWeek')
+			period-grid-week.calendar__grid
+		ng-container('*ngSwitchCase'='calendarService.isPeriodTypeMonth')
+			period-grid-month.calendar__grid
+		ng-container('*ngSwitchCase'='calendarService.isPeriodTypeYear')
+			period-grid-year.calendar__grid
+

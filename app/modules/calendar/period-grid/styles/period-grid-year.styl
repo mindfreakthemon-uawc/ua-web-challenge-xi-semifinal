@@ -1,0 +1,63 @@
+:host {
+	display: flex;
+}
+
+.period-grid__scrollable {
+	flex-wrap: wrap;
+}
+
+.period-grid__month {
+	flex: 1;
+
+	display: flex;
+	flex-basis: 25%;
+
+	flex-direction: column;
+
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.period-grid__month-title {
+	min-height: min-content;
+
+	padding: 0.5em;
+	font-size: 2em;
+
+	cursor: pointer;
+}
+
+.period-grid__weekdays {
+	display: flex;
+
+	opacity: .5;
+}
+
+.period-grid__weekday {
+	flex: 1;
+
+	text-align: center;
+}
+
+.period-grid__days {
+	flex: 1;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.period-grid__day {
+	flex: 1;
+	flex-basis: calc(100% / 7)
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.period-grid__day--weekend {
+	opacity: .6;
+}
+
+.period-grid__day--adjacent {
+	opacity: .3;
+}

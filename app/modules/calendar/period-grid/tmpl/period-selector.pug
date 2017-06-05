@@ -1,0 +1,21 @@
+.btn-group
+	button.btn.btn-secondary(
+			type='button',
+			'[class.active]'='calendarService.isPeriodTypeDay',
+			'(click)'='calendarService.setPeriodTypeDay()'
+		) Day
+	button.btn.btn-secondary(
+			type='button',
+			'[class.active]'='calendarService.isPeriodTypeWeek',
+			'(click)'='calendarService.setPeriodTypeWeek()'
+	) Week
+	button.btn.btn-secondary(
+			type='button',
+			'[class.active]'='calendarService.isPeriodTypeMonth',
+			'(click)'='calendarService.setPeriodTypeMonth()'
+	) Month
+	button.btn.btn-secondary(
+			type='button',
+			'[class.active]'='calendarService.isPeriodTypeYear',
+			'(click)'='calendarService.setPeriodTypeYear()'
+	) Year

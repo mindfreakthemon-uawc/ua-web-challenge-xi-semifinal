@@ -1,0 +1,46 @@
+- let granularity = 30;
+- let hours = [...Array(24).keys()];
+- let minutes = [...Array(60 / granularity).keys()]
+
+mixin minutesGrid(hour)
+	for minute in minutes
+		.period-grid__time-minute(
+			'(mousedown)'='handleLineMouseDown(' + hour + ', ' + minute * granularity + ')',
+			'(mousemove)'='handleLineMouseMove($event, ' + hour + ', ' + minute * granularity + ')'
+		)
+
+.period-grid__scrollable
+
+	.period-grid__overview('*ngFor'='let day of createArray(7)')
+
+		// top row with weekday name
+		.period-grid__weekday(
+			'(click)'='showDate(day)'
+		) {{ moment.weekdaysShort((day + 1) % 7) }}, {{ rangeStart.add({ day: day }).date() }}
+
+		// bottom row with grid lines & events
+		.period-grid__display-column
+
+			for hour in hours
+				.period-grid__line
+					+minutesGrid(hour)
+
+			.period-grid__line.period-grid__line--empty-space
+
+			event.period-grid__event(
+				'*ngFor'='let display of stream[day]',
+				'[event]'='display.event',
+				'[style.left.%]'='100 * (display.s - 1) / display.p',
+				'[style.width.%]'='100 * display.f / display.p',
+				'[style.top.%]'='100 * display.t',
+				'[style.bottom.%]'='100 * display.b',
+				'[class.period-grid__event--transparent]'='action',
+				'[class.period-grid__event--editable]'='display.event === activeEvent',
+				'(mousedown)'='handleEventMouseDown(display.event)'
+			)
+
+.period-grid__sidebar
+	sidebar(
+		'[event]'='activeEvent',
+		'(remove)'='removeEvent()'
+	)

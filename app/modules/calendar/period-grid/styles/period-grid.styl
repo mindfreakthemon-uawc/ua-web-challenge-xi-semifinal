@@ -1,0 +1,129 @@
+.period-grid__sidebar {
+  flex: 1;
+}
+
+.period-grid__scrollable {
+  flex: 3;
+
+  overflow: auto;
+
+  max-height: 100%;
+
+  padding: 1em;
+
+  display: flex;
+}
+
+.period-grid__overview {
+  display: flex;
+
+  user-select: none;
+
+  min-height: 60em;
+
+  flex: 1;
+}
+
+/* overview columns */
+.period-grid__time-column {
+  width: 4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.period-grid__display-column {
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- */
+
+/* time cell */
+.period-grid__time-cell {
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  //border-top: 1px solid transparent;
+}
+
+.period-grid__time-cell--empty-space {
+  flex: 0;
+}
+
+/* --- */
+
+.period-grid__time {
+  position: absolute;
+  top: -0.6em;
+
+  width: 100%;
+
+  font-family: monospace;
+  font-size: 0.8em;
+
+  text-align: center;
+}
+
+.period-grid__time-minute {
+  flex: 1;
+
+  border-top: 1px solid rgba(0, 0, 0, .2);
+
+  .period-grid__line &:first-of-type {
+    border-top-color: rgba(0, 0, 0, .4);
+  }
+
+  .period-grid__time-cell &:first-of-type {
+    border-top-color: transparent;
+  }
+}
+
+/* grid line */
+.period-grid__line {
+  //border-top: 1px solid rgba(0, 0, 0, .4);
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  position: relative;
+}
+
+.period-grid__line--empty-space {
+  flex: 0;
+}
+
+/* --- */
+
+/* event */
+.period-grid__event {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background: rgba(100, 100, 100, .5);
+
+  cursor: pointer;
+}
+
+.period-grid__event--transparent {
+  pointer-events: none;
+}
+
+.period-grid__event--editable {
+  background: rgba(100, 100, 100, .8);
+}
+
+/* --- */

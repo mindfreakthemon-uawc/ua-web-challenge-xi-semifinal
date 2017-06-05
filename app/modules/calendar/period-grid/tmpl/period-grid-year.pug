@@ -1,0 +1,20 @@
+.period-grid__scrollable
+
+	.period-grid__month('*ngFor'='let month of moment.months(); let monthIndex = index')
+		.period-grid__month-title(
+			'(click)'='showMonth(monthIndex)'
+		) {{ month }}
+
+		.period-grid__weekdays
+			.period-grid__weekday('*ngFor'='let weekday of createArray(7)')
+				| {{ moment.weekdaysMin((weekday + 1) % 7) }}
+
+		.period-grid__days
+			.period-grid__day(
+				'*ngFor'='let day of getDaysRange(rangeStart.clone().add({ month: monthIndex }))',
+				'[class.period-grid__day--adjacent]'='day < 0 || day >= rangeStart.clone().add({ month: monthIndex }).daysInMonth()',
+				'[class.period-grid__day--weekend]'='[0, 6].includes(rangeStart.clone().add({ month: monthIndex }).add({ day: day }).day())',
+				'(click)'='showDate(day, monthIndex)'
+			)
+				| {{ moment(rangeStart.clone().add({ month: monthIndex }).add({ day: day })).date() }}
+

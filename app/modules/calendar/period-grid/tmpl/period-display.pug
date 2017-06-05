@@ -1,0 +1,9 @@
+ng-container('[ngSwitch]'='true')
+	ng-container('*ngSwitchCase'='calendarService.isPeriodTypeDay')
+		span {{ calendarService.date.format('dddd, LL') }}
+	ng-container('*ngSwitchCase'='calendarService.isPeriodTypeWeek')
+		span {{ calendarService.date.format('MMMM, YYYY') }}
+	ng-container('*ngSwitchCase'='calendarService.isPeriodTypeMonth')
+		span {{ calendarService.date.format('MMMM, YYYY') }}
+	ng-container('*ngSwitchCase'='calendarService.isPeriodTypeYear')
+		span {{ calendarService.date.format('YYYY') }}

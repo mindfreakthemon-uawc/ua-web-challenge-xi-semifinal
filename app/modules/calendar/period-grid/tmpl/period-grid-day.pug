@@ -1,0 +1,65 @@
+- let granularity = 15;
+- let hours = [...Array(24).keys()];
+- let minutes = [...Array(60 / granularity).keys()]
+
+mixin minutesGrid(hour)
+	for minute in minutes
+		.period-grid__time-minute(
+			'(mousedown)'='handleLineMouseDown(' + hour + ', ' + minute * granularity + ')',
+			'(mousemove)'='handleLineMouseMove($event, ' + hour + ', ' + minute * granularity + ')'
+		)
+
+.period-grid__scrollable
+
+	.period-grid__overview
+		// left column with timestamps
+		.period-grid__time-column
+
+			for hour in hours
+				.period-grid__time-cell
+					+minutesGrid(hour)
+					.period-grid__time #{ moment({ hours: hour, minutes: 0 }).format('HH:mm') }
+
+					.period-grid__time.period-grid__time--now(
+						'*ngIf'='calendarService.now.isSame(rangeStart.add({ hours: ' + hour + ' }), "hour")',
+						'[style.top.%]'='100 * calendarService.now.minutes() / 60'
+					): span {{ calendarService.now.format('HH:mm') }}
+
+			.period-grid__time-cell.period-grid__time-cell--empty-space
+				.period-grid__time 00:00
+
+
+
+		// right column with grid lines & events
+		.period-grid__display-column
+
+			for hour in hours
+				.period-grid__line
+					+minutesGrid(hour)
+
+					.period-grid__time-minute.period-grid__time-minute--now(
+						'*ngIf'='calendarService.now.isSame(rangeStart.add({ hours: ' + hour + ' }), "hour")',
+						'[style.top.%]'='100 * calendarService.now.minutes() / 60'
+					)
+
+
+			.period-grid__line.period-grid__line--empty-space
+
+
+			event.period-grid__event(
+				'*ngFor'='let display of stream',
+				'[event]'='display.event',
+				'[style.left.%]'='100 * (display.s - 1) / display.p',
+				'[style.width.%]'='100 * display.f / display.p',
+				'[style.top.%]'='100 * display.t',
+				'[style.bottom.%]'='100 * display.b',
+				'[class.period-grid__event--transparent]'='action',
+				'[class.period-grid__event--editable]'='display.event === activeEvent',
+				'(mousedown)'='handleEventMouseDown(display.event)'
+			)
+
+.period-grid__sidebar
+	sidebar(
+		'[event]'='activeEvent',
+		'(remove)'='removeEvent()'
+	)

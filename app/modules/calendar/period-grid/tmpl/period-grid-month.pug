@@ -1,0 +1,25 @@
+.period-grid__scrollable
+
+		// top row with weekday name
+		.period-grid__weekday-row
+			.period-grid__weekday('*ngFor'='let day of createArray(7)')
+				| {{ moment.weekdaysShort((day + 1) % 7) }}
+
+		.period-grid__week('*ngFor'='let week of stream')
+			.period-grid__day('*ngFor'='let day of week')
+				.period-grid__day-title('(click)'='showDate(day.rangeStartOffset)')
+					| {{ day.date.date() }}
+
+				event.period-grid__event(
+					'*ngFor'='let event of day.events',
+					'[event]'='event',
+					'[class.period-grid__event--transparent]'='action',
+					'[class.period-grid__event--editable]'='event === activeEvent',
+					'(mousedown)'='handleEventMouseDown(event)'
+				)
+
+.period-grid__sidebar
+	sidebar(
+		'[event]'='activeEvent',
+		'(remove)'='removeEvent()'
+	)
