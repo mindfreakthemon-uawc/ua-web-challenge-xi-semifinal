@@ -5,7 +5,7 @@ const app_module_1 = require("./app.module");
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/worker.js', {
-        scope: '/'
+        scope: '/ua-web-challenge-xi-semifinal/'
     })
         .then((registration) => {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
