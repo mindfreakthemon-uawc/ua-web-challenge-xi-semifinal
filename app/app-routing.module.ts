@@ -14,7 +14,7 @@ const routes: Routes = [
         RouterModule
     ],
     providers: [
-        { provide: APP_BASE_HREF, useValue: '/' }
+        { provide: APP_BASE_HREF, useValue: '/' + window.location.pathname.split('/')[1] }
     ]
 })
 export class AppRoutingModule {

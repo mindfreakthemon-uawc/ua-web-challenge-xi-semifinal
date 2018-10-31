@@ -44,7 +44,7 @@ export class PeriodGridMonthComponent extends PeriodGridComponent {
 
 		let days = this.getDaysRange(rangeStart);
 
-		for (const [index, day] of days.entries()) {
+		days.forEach((day, index) => {
 			const week = Math.floor(index / 7);
 			const localRangeStart = rangeStart.clone().add(day, 'days');
 			const localRangeEnd = localRangeStart.clone().endOf('day');
@@ -61,7 +61,7 @@ export class PeriodGridMonthComponent extends PeriodGridComponent {
 				});
 
 			promises.push(promise);
-		}
+		});
 
 		Promise.all(promises)
 			.then(() => this.stream = stream);

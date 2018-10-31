@@ -1,5 +1,5 @@
 (function (global) {
-	let map = {
+	var map = {
 		'app': 'build/app',
 		'@angular': 'build/vendor/@angular',
 		'rxjs': 'build/vendor/rxjs',
@@ -8,7 +8,7 @@
 		'ics-js': 'build/vendor/ics-js/dist/ics-js.js'
 	};
 
-	let packages = {
+	var packages = {
 		'app': {
 			main: 'main.js',
 			defaultExtension: 'js'
@@ -18,7 +18,7 @@
 		}
 	};
 
-	let ngPackageNames = [
+	var ngPackageNames = [
 		'common',
 		'compiler',
 		'core',

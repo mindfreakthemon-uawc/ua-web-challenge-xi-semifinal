@@ -27,4 +27,4 @@ html
 		//- endinject
 		script(inline, src='systemjs.config.js')
 		script.
-			System.import('app');
+			System.config({ baseURL: location.pathname }); System.import('app');
